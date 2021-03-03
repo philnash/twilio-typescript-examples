@@ -1,11 +1,10 @@
 import { twiml } from "twilio";
-import { Router, Response } from "express";
-import bodyParser from "body-parser";
+import { urlencoded, Router, Response } from "express";
 import { MessagingRequest } from "../types/request";
 
 const { MessagingResponse } = twiml;
 const router = Router();
-router.use(bodyParser.urlencoded({ extended: false }));
+router.use(urlencoded({ extended: false }));
 
 router.post("/", (req: MessagingRequest, res: Response<string>) => {
   const message = req.body.Body;
