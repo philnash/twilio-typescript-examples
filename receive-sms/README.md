@@ -2,6 +2,8 @@
 
 This is an example project showing how to receive and reply to SMS messages with the [Twilio Programmable Messaging API](https://www.twilio.com/docs/sms/api) and [TypeScript](https://www.typescriptlang.org/).
 
+You can read about [how to receive and reply to SMS message with TypeScript and Twilio](https://www.twilio.com/blog/receive-reply-sms-messages-typescript-twilio) on the Twilio blog.
+
 ## Running this project
 
 ### Things you will need
