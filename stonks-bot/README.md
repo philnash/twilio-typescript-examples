@@ -1,8 +1,6 @@
-# Receive and reply to SMS with Twilio and TypeScript
+# Build an SMS stocks bot with Twilio and TypeScript
 
-This is an example project showing how to receive and reply to SMS messages with the [Twilio Programmable Messaging API](https://www.twilio.com/docs/sms/api) and [TypeScript](https://www.typescriptlang.org/).
-
-You can read about [how to receive and reply to SMS message with TypeScript and Twilio](https://www.twilio.com/blog/receive-reply-sms-messages-typescript-twilio) on the Twilio blog.
+This is an example project showing how to receive SMS messages, look up the stock price based on the body of the message and reply using the [Twilio Programmable Messaging API](https://www.twilio.com/docs/sms/api), the [Finnhub API](https://finnhub.io/docs/api/quote) and [TypeScript](https://www.typescriptlang.org/).
 
 ## Running this project
 
@@ -12,14 +10,15 @@ You can read about [how to receive and reply to SMS message with TypeScript and 
 * A Twilio account (if you don't have one yet, [sign up for a free Twilio account here and receive $10 credit when you upgrade](https://twil.io/philnash))
 * A Twilio phone number that can receive SMS messages
 * [ngrok](https://ngrok.com/) so that you can [respond to webhooks in your local development environment](https://www.twilio.com/blog/2015/09/6-awesome-reasons-to-use-ngrok-when-testing-webhooks.html)
+* A free [Finnhub account](https://finnhub.io/register)
 
 ### Get the code
 
-Clone the repo and change into the `receive-sms` directory:
+Clone the repo and change into the `stonks-bot` directory:
 
 ```bash
 git clone https://github.com/philnash/twilio-typescript-examples.git
-cd twilio-typescript-examples/receive-sms
+cd twilio-typescript-examples/stonks-bot
 ```
 
 ### Dependencies
@@ -29,6 +28,16 @@ Install the dependencies:
 ```bash
 npm install
 ```
+
+### Environment Variables
+
+Copy the `.env.example` file to `.env`:
+
+```bash
+cp .env.example .env
+```
+
+Fill in your Finnhub API key.
 
 ### Compile the TypeScript to JavaScript
 
@@ -76,4 +85,4 @@ https://RANDOM_STRING.ngrok.io/messages
 
 Save the phone number and you are ready.
 
-Send your number a message and you should receive a message in reply 🎉
+Send your number a message with a stock symbol and you should receive a message in reply 🎉
