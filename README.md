@@ -6,6 +6,7 @@ The examples available are:
 
 * [Send SMS with Twilio and TypeScript](./send-sms/)
 * [Receive and reply to SMS with Twilio and TypeScript](./receive-sms)
+* [Build an SMS stocks bot with Twilio and TypeScript](./stonks-bot)
 
 ## Running these projects
 
